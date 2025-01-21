@@ -1,4 +1,23 @@
-let airplane = {
+type Caterer = {
+  name: string;
+  address: string;
+  phone: number;
+};
+
+type Seats = {
+  [key: string]: string;
+};
+
+type Airplane = {
+  model: string;
+  flightNumber: string;
+  timeOfDeparture: Date;
+  timeOfArrival: Date;
+  caterer: Caterer;
+  seats: Seats;
+};
+
+let airplane: Airplane = {
   model: "Airbus A380",
   flightNumber: "A2201",
   timeOfDeparture: new Date(),
