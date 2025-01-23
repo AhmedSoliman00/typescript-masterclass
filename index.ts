@@ -31,3 +31,23 @@ function filterCats(item: string) {
 // Result of invoking the function
 console.log(filter(numbers, predicate));
 console.log(filter(animals, filterCats));
+
+const myMap = function<T>(arr: T[], myFunction: (item: T) => T): T[] {
+  
+  const result:T[] = []
+  for (const element of arr) {
+    result.push(myFunction(element))
+  }
+  return result
+}
+
+function plusOne(num:number):number {
+  return num + 1
+}
+
+function plusT(st:string):string {
+  return st + "t"
+}
+
+console.log(myMap(numbers,plusOne))
+console.log(myMap(animals,plusT))
